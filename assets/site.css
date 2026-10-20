@@ -192,6 +192,15 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .map-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--on-dark-soft);font-weight:700;background-image:linear-gradient(var(--line-dark) 1px,transparent 1px),linear-gradient(90deg,var(--line-dark) 1px,transparent 1px);background-size:44px 44px}
 .map-ph svg{width:42px;height:42px;fill:none;stroke:var(--gold);stroke-width:1.6}
 
+/* social */
+.follow{display:flex;align-items:center;gap:14px;margin-top:26px;color:var(--on-dark-faint);font-weight:700;font-size:15px}
+.social{display:flex;gap:10px}
+.social a{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--line-dark);display:grid;place-items:center;color:var(--on-dark);transition:color .2s,border-color .2s,background .2s}
+.social a:hover{color:var(--black);background:var(--gold);border-color:var(--gold)}
+.social svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8}
+.social svg .dot,.social svg .fill{fill:currentColor;stroke:none}
+.foot-brand .social{margin-top:18px}
+
 /* footer */
 .foot{background:var(--black-3);color:var(--on-dark-soft);padding:clamp(56px,7vw,84px) 0 28px;font-size:15.5px}
 .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(28px,4vw,60px);padding-bottom:36px;border-bottom:1px solid var(--line-dark)}
@@ -259,6 +268,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   body.mcta-on .a11y-btn{bottom:80px}
   .drawer{padding-bottom:92px}
   .visit-cta{display:grid;grid-template-columns:1fr 1fr}
+  .visit-cta .btn:first-child{grid-column:1/-1}
   .foot{padding-bottom:96px}
 }
 @media (max-width:560px){
