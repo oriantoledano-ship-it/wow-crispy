@@ -268,7 +268,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   body.mcta-on .a11y-btn{bottom:80px}
   .drawer{padding-bottom:92px}
   .visit-cta{display:grid;grid-template-columns:1fr 1fr}
-  .visit-cta .btn:first-child{grid-column:1/-1}
+  .visit-cta .btn:first-child,.visit-cta .btn--tel{grid-column:1/-1}
   .foot{padding-bottom:96px}
 }
 @media (max-width:560px){
@@ -276,6 +276,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .hdr-in{width:calc(100% - 24px)}
   .hero-h{font-size:clamp(64px,19.5vw,92px)}
   .hero-cta .btn{flex:1 1 auto;padding:0 18px;white-space:nowrap}
+  .hero-cta .btn--gold{flex-basis:100%}
   .ticker span{font-size:28px}
   .coat-cards{grid-template-columns:1fr}
   .foot-top{grid-template-columns:1fr}
