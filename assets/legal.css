@@ -1,0 +1,153 @@
+/* וואו קריספי - legal pages (accessibility statement, terms, privacy), same tokens as the main site. */
+
+:root {
+  --paper: #FFF5E4;
+  --paper-2: #F1E8D8;
+  --espresso: #0E0D0B;
+  --ink: #15120E;
+  --ink-soft: #5F574B;
+  --ink-faint: #8E8679;
+  --cream-text: #FFF5E4;
+  --cream-soft: #CDC3B2;
+  --crema: #A86B05;
+  --crema-2: #F4A51C;
+  --line: rgba(21, 18, 14, .14);
+  --line-cream: rgba(255, 245, 228, .16);
+
+  --serif: 'Rubik', 'Assistant', sans-serif;
+  --sans: 'Assistant', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.85;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a { color: var(--crema); text-decoration: none; }
+a:hover { color: var(--crema-2); text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--crema); outline-offset: 3px; }
+
+/* ---------- Layout ---------- */
+.legal {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px clamp(18px, 5vw, 32px) 96px;
+}
+
+.back-home {
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 46px;
+  padding: 10px 20px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background .3s ease, color .3s ease, border-color .3s ease;
+}
+.back-home:hover { background: var(--espresso); border-color: var(--espresso); color: var(--cream-text); text-decoration: none; }
+.back-home svg { width: 14px; height: 14px; }
+
+.legal-brand {
+  display: block;
+  margin-bottom: 10px;
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--crema);
+}
+
+h1 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(40px, 7vw, 66px);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.legal-meta {
+  padding-bottom: 30px;
+  margin-bottom: 34px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+h2 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(24px, 3.4vw, 32px);
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 46px 0 14px;
+}
+
+p { margin-bottom: 16px; color: var(--ink-soft); }
+strong { color: var(--ink); font-weight: 700; }
+
+ul { margin: 0 0 20px; padding: 0; list-style: none; }
+li { position: relative; padding-inline-start: 22px; margin-bottom: 11px; color: var(--ink-soft); }
+li::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 3px;
+  top: 12px;
+  width: 6px;
+  height: 6px;
+  background: var(--crema);
+}
+
+.legal-note {
+  border-radius: 14px;
+  margin-top: 44px;
+  padding: 24px 26px;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  color: var(--ink-soft);
+  font-size: 15.5px;
+}
+.legal-note strong { color: var(--crema); }
+
+/* ---------- Footer ---------- */
+.legal-foot {
+  padding: 34px clamp(18px, 5vw, 32px) 46px;
+  background: var(--espresso);
+  text-align: center;
+  color: var(--cream-soft);
+  font-size: 13px;
+}
+.legal-foot nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.legal-foot nav a { color: var(--cream-text); }
+.legal-foot nav a:hover { color: var(--crema-2); }
+.legal-foot nav span { color: var(--line-cream); }
+.legal-credit { margin-top: 10px; }
+.legal-credit a { color: var(--cream-text); text-decoration: underline; text-underline-offset: 3px; }
+.legal-credit a:hover { color: var(--crema-2); }
+
+@media (max-width: 640px) {
+  .legal { padding-top: 34px; }
+  .back-home { margin-bottom: 32px; }
+}
